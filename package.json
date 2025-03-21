@@ -1,0 +1,23 @@
+{
+  "name": "blockchain-with-javascript",
+  "version": "1.0.0",
+  "description": "<h1>Introduction to Blockchain</h1> <h2>Language: Javascript</h2> <p>Jaber Ahmed</p> <img src=\"assets/blockchain.jpg\" alt=\"\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaber4770/Blockchain-with-Javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaber4770/Blockchain-with-Javascript/issues"
+  },
+  "homepage": "https://github.com/Jaber4770/Blockchain-with-Javascript#readme",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
