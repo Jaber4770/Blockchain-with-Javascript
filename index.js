@@ -1,3 +1,4 @@
+const { error } = require("console");
 const sha256 = require("crypto-js/sha256");
 // const { resourceUsage } = require("process");
 const EC = require("elliptic").ec;
@@ -80,6 +81,7 @@ class Blockchain {
         return this.chain[this.chain.length - 1];
     }
 
+
     addTransaction(transaction) {
         if (!transaction.fromAddress || !transaction.toAddress) {
             throw new Error("Can't process transaction.");
@@ -87,6 +89,12 @@ class Blockchain {
         if (!transaction.isValid()) {
             throw new Error("Invalid transaction.");
         }
+        if (transaction.amount < 0) {
+            throw new Error("invalid transaction");
+        }
+        // if (transaction.amount > this.getBalanceOfAddress(transaction.fromAddress)) {
+        //     throw new Error("not enough balance");
+        // }
         this.pendingTransactions.push(transaction);
     }
     minePendingTransactions(minerAddress) {
